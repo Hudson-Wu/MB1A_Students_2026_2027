@@ -3,6 +3,12 @@ title: "Prac 1 exercises"
 author: "Haochen Wu"
 format: html
 ---
+```{r}
+library(tidyverse)
+library(gt)
+
+```
+
 
 ```{r}
 #round
@@ -42,5 +48,63 @@ cell_num_before_B<-8123
 cell_num_after_A<-1432
 cell_num_after_B<-7543
 
+```
+
+```{r}
+#Vectors
+cell_ID_A<-"CX1"
+cell_ID_B<-"CX2"
+
+treated_A<-TRUE
+treated_B<-FALSE
+
+cell_num_before_A<-5415
+cell_num_before_B<-8123
+
+cell_num_after_A<-1432
+cell_num_after_B<-7543
+
+
+cell_id_vec <- c(cell_ID_A,cell_ID_B)
+treated_vec <- c(treated_A,treated_B)
+no_before_vec <- c(cell_num_before_A,cell_num_before_B)
+no_after_vec <- c(cell_num_after_A,cell_num_after_B)
+```
+
+```{r}
+#Indexing
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+x<-all_my_pets[4]
+print(x)
+```
+
+```{r}
+#Creating a data frame
+cell_ID_A<-"CX1"
+cell_ID_B<-"CX2"
+
+treated_A<-TRUE
+treated_B<-FALSE
+
+cell_num_before_A<-5415
+cell_num_before_B<-8123
+
+cell_num_after_A<-1432
+cell_num_after_B<-7543
+
+
+cell_id_vec <- c(cell_ID_A,cell_ID_B)
+treated_vec <- c(treated_A,treated_B)
+no_before_vec <- c(cell_num_before_A,cell_num_before_B)
+no_after_vec <- c(cell_num_after_A,cell_num_after_B)
+
+my_data_frame<-tibble(
+  cell_ID=cell_id_vec,
+  treated=treated_vec,
+  num_cells_before=no_before_vec,
+  num_cells_after=no_after_vec
+)
+
+gt(my_data_frame)
 ```
 
