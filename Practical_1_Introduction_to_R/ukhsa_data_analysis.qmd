@@ -1,0 +1,32 @@
+---
+title: "Data analysis"
+author: "Haochen Wu"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+
+```
+
+```{r}
+rhinovirus<- read_csv("data/ukhsa-chart-download-rhinovirus.csv")
+gt(head(rhinovirus))
+```
+
+```{r}
+rhinovirus<- read_csv("data/ukhsa-chart-download-rhinovirus.csv")
+
+ggplot(rhinovirus, aes(
+  x= date,
+  y= metric_value
+))+
+  geom_line(color="red")+
+  xlab("Date")+
+  ylab("Percentage")+
+  ggtitle("Percentage of positive PCR test results for rhinovirus")
+
+  
+```
