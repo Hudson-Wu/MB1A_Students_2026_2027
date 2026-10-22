@@ -1,0 +1,27 @@
+---
+title: "Brain"
+author: "Haochen Wu"
+format: html
+---
+
+For this question I am going to calculate and compare which species, among human, pig, and mouse, had the highest number of genes with regionally elevated expression in the forebrain.
+
+Human
+```{r}
+total_elevated_gene_human<-sum(180,83,57,110)
+print(total_elevated_gene_human)
+```
+
+Pig
+```{r}
+total_elevated_gene_pig<-sum(109,157,31,45)
+print(total_elevated_gene_pig)
+```
+
+Mouse
+```{r}
+total_elevated_gene_mouse<-sum(55,185,60,98)
+print(total_elevated_gene_mouse)
+```
+
+So the highest number is 430 in human.
