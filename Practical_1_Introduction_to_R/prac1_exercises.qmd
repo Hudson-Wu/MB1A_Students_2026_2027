@@ -1,0 +1,46 @@
+---
+title: "Prac 1 exercises"
+author: "Haochen Wu"
+format: html
+---
+
+```{r}
+#round
+round(3.14159)
+```
+
+```{r}
+#repeat
+rep(5,7)
+```
+
+```{r}
+#Character, numerical and logical variables
+x<-2.33
+y<-"hello"
+z<-TRUE
+
+print(x)
+print(y)
+print(z)
+print(class(x))
+print(class(y))
+print(class(z))
+```
+
+```{r}
+#Using variables of different types
+cell_ID_A<-"CX1"
+cell_ID_B<-"CX2"
+
+treated_A<-TRUE
+treated_B<-FALSE
+
+cell_num_before_A<-5415
+cell_num_before_B<-8123
+
+cell_num_after_A<-1432
+cell_num_after_B<-7543
+
+```
+
