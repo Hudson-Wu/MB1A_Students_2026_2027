@@ -38,7 +38,6 @@ sum(my_numbers)
 ```
 
 ```         
-
 ```
 
 ```         
@@ -168,4 +167,29 @@ gt(autumn_data)
 ```{r}
 write_csv(spring_data, "output/birds_spring.csv")
 write_csv(autumn_data, "output/birds_autumn.csv")
+```
+
+```{r}
+min_lon<-spring_data|>pull(Longitude)|>min()
+max_lon<-spring_data|>pull(Longitude)|>max()
+min_lat<-spring_data|>pull(Latitude)|>min()
+max_lat<-spring_data|>pull(Latitude)|>max()
+print(min_lon)
+print(max_lat)
+print(min_lat)
+print(max_lon)
+
+ggplot(spring_data, aes(x=Longitude, y=Latitude, color=Site, shape=Location_Type))+geom_point(size=3)+annotation_borders(linewidth=0.2)+coord_quickmap(xlim=c(min_lon-2,max_lon+2),ylim=c(min_lat-2,max_lat+2)
+                                                                                                                )+
+  geom_path(aes(group=Site))
+ggtitle("Pied Flycatcher Spring Migration Routes")+
+xlab("Longitude(°)")+
+ylab("Latitude(°)")+
+  theme_minimal()
+
+```
+
+```{r}
+
+
 ```
